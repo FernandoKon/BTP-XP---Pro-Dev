@@ -1,7 +1,57 @@
 <mvc:View controllerName="com.lab2dev.btpxp.controller.Home"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-        <content />
-    </Page>
+    xmlns="sap.m"
+    height="100%">
+    <IconTabBar class="sapUiResponsiveContentPadding">
+        <items>
+            <IconTabFilter key="Cadastro" text="Cadastro">
+                <items>
+                    <IconTabFilter text="Novos Usuários">
+                    </IconTabFilter>
+                    <IconTabFilter text="Aprovação">
+                    </IconTabFilter>
+                </items>
+            </IconTabFilter>
+
+            <IconTabFilter key="Administração" text="Administração">
+                <items>
+                    <IconTabFilter text="Eventos">
+                    </IconTabFilter>
+                    <IconTabFilter text="Agendas">
+                    </IconTabFilter>
+                    <IconTabFilter text="Sessões">
+                    </IconTabFilter>
+                    <IconTabFilter text="Empresas">
+                    </IconTabFilter>
+                    <IconTabFilter text="Pacotes">
+                    </IconTabFilter>
+                    <IconTabFilter text="Repositório">
+                    </IconTabFilter>
+                    <IconTabFilter text="Usuários">
+                    </IconTabFilter>
+                </items>
+            </IconTabFilter>
+
+            <IconTabFilter key="Gamificação" text="Gamificação">
+                <items>
+                    <IconTabFilter text="Tarefas">
+                    </IconTabFilter>
+                    <IconTabFilter text="Trilhas">
+                    </IconTabFilter>
+                </items>
+            </IconTabFilter>
+
+            <IconTabFilter key="Relatórios" text="Relatórios">
+                <items>
+                    <IconTabFilter text="Ranking">
+                        <mvc:XMLView viewName="com.lab2dev.btpxp.view.Ranking" />
+                    </IconTabFilter>
+                    <IconTabFilter text="Check in">
+                    </IconTabFilter>
+                    <IconTabFilter text="Feedbacks">
+                    </IconTabFilter>
+                </items>
+            </IconTabFilter>
+        </items>
+    </IconTabBar>
 </mvc:View>
