@@ -1,7 +1,86 @@
-<mvc:View controllerName="com.lab2dev.btpxp.controller.Home"
+<mvc:View controllerName="com.lab2dev.btpxp.controller.Ranking"
+    xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:fb="sap.ui.comp.filterbar"
     height="100%">
-    <Page id="Ranking" title="Ranking">
-    </Page>
+
+    <f:DynamicPage fitContent="true" showFooter="true" toggleHeaderOnTitleClick="false" >
+			<f:title >
+				<f:DynamicPageTitle >
+					<f:heading >
+						<Title text="Relatórios"/>               
+					</f:heading>	
+				</f:DynamicPageTitle>
+			</f:title>
+			<f:header>
+				<f:DynamicPageHeader pinnable="false">
+					<f:content>
+						<fb:FilterBar id="filterbar" header="Ranking" showFilterConfiguration="false"  showClearOnFB="true" >                
+							<fb:filterGroupItems>
+								<fb:FilterGroupItem name="Pesquisar" label="Pesquisar" groupName="Group1" visibleInFilterBar="true">
+									<fb:control>
+										<Input placeholder="Texto" />
+									</fb:control>
+								</fb:FilterGroupItem>
+								<fb:FilterGroupItem name="Empresas" label="Empresas" groupName="Group1" visibleInFilterBar="true">
+									<fb:control>
+										<MultiComboBox placeholder="Selecionar empresa"
+											name="Empresas"
+											selectionChange=".onSelectionChange"
+											items="{}"
+										>
+											<core:Item key="{key}" text="{name}"/>
+										</MultiComboBox>
+									</fb:control>
+								</fb:FilterGroupItem>
+								<fb:FilterGroupItem name="OrdernarPontuação" label="Ordernar pontuação" groupName="Group1" visibleInFilterBar="true">
+									<fb:control>
+										<MultiComboBox
+                                            placeholder="Maior para menor"
+											name="OrdernarPontuação"
+											selectionChange=".onSelectionChange"
+											items="{}"
+										>
+											<core:Item key="{key}" text="{name}"/>
+										</MultiComboBox>
+									</fb:control>
+								</fb:FilterGroupItem>
+							</fb:filterGroupItems>                       
+						</fb:FilterBar>
+					</f:content>
+				</f:DynamicPageHeader>
+			</f:header>
+			<f:content>
+				<Table
+					id="table"
+					inset="false"
+					items="{}"
+				>
+					<columns>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="Name"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="Category"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="SupplierName"/>
+						</Column>
+					</columns>
+
+					<items>
+						<ColumnListItem vAlign="Middle">
+							<cells>
+								<ObjectIdentifier title="{Name}" text="{ProductId}" />
+								<Text text="{Category}" />
+								<Text text="{SupplierName}" />
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</f:content>
+		</f:DynamicPage>
+
 </mvc:View>

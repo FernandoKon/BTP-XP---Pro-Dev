@@ -16,15 +16,7 @@
       "toolsId": "6da2efd7-36f0-4fc6-b639-0ff3465b4306"
     },
     "dataSources": {
-      "mainService": {
-        "uri": "/northwind/northwind.svc/",
-        "type": "OData",
-        "settings": {
-          "annotations": [],
-          "localUri": "localService/metadata.xml",
-          "odataVersion": "2.0"
-        }
-      }
+      
     }
   },
   "sap.ui": {
@@ -95,9 +87,16 @@
       "routes": [
         {
           "name": "RouteHome",
-          "pattern": ":?query:",
+          "pattern": "",
           "target": [
             "TargetHome"
+          ]
+        },
+        {
+          "name": "Ranking",
+          "pattern": "Ranking",
+          "target": [
+            "TargetRanking"
           ]
         }
       ],
@@ -108,6 +107,13 @@
           "clearControlAggregation": false,
           "viewId": "Home",
           "viewName": "Home"
+        },
+        "TargetRanking": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Ranking",
+          "viewName": "Ranking"
         }
       }
     },
