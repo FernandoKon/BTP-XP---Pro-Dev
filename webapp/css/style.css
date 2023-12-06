@@ -1,1 +1,7 @@
 /* Enter your custom styles here */
+
+.roundedTable {
+    border-radius: 16px;
+    overflow: hidden;
+}
+

@@ -1,0 +1,106 @@
+<mvc:View controllerName="com.lab2dev.btpxp.controller.Ranking"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:fb="sap.ui.comp.filterbar"
+    height="100%">
+
+    <f:DynamicPage fitContent="true" showFooter="true" toggleHeaderOnTitleClick="false" >
+			<f:title >
+				<f:DynamicPageTitle >
+					<f:heading >
+						<Title text="Relatórios"/>               
+					</f:heading>	
+				</f:DynamicPageTitle>
+			</f:title>
+			<f:header>
+				<f:DynamicPageHeader pinnable="false">
+					<f:content>
+						<fb:FilterBar id="filterbar" header="Ranking" showFilterConfiguration="false"  showClearOnFB="true" >                
+							<fb:filterGroupItems>
+								<fb:FilterGroupItem name="Pesquisar" label="Pesquisar" groupName="Group1" visibleInFilterBar="true">
+									<fb:control>
+										<Input placeholder="Texto" />
+									</fb:control>
+								</fb:FilterGroupItem>
+								<fb:FilterGroupItem name="Empresas" label="Empresas" groupName="Group1" visibleInFilterBar="true">
+									<fb:control>
+										<MultiComboBox placeholder="Selecionar empresa"
+											name="Empresas"
+											selectionChange=".onSelectionChange"
+											items="{}"
+										>
+											<core:Item key="{key}" text="{name}"/>
+										</MultiComboBox>
+									</fb:control>
+								</fb:FilterGroupItem>
+								<fb:FilterGroupItem name="OrdernarPontuação" label="Ordernar pontuação" groupName="Group1" visibleInFilterBar="true">
+									<fb:control>
+										<MultiComboBox
+                                            placeholder="Maior para menor"
+											name="OrdernarPontuação"
+											selectionChange=".onSelectionChange"
+											items="{}"
+										>
+											<core:Item key="{key}" text="{name}"/>
+										</MultiComboBox>
+									</fb:control>
+								</fb:FilterGroupItem>
+							</fb:filterGroupItems>                       
+						</fb:FilterBar>
+					</f:content>
+				</f:DynamicPageHeader>
+			</f:header>
+			<f:content>
+				<Table
+					id="table"
+                    backgroundDesign="solid"
+					inset="false"
+					items="{}"
+				>
+					<columns>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="Ação"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="Foto"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="Nome"/>
+						</Column>
+                        <Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="Cargo"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="Empresa"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="Posição"/>
+						</Column>
+                        <Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="Pontuação"/>
+						</Column>
+						<Column minScreenWidth="Tablet" demandPopin="true">
+							<Text text="Ação"/>
+						</Column>
+					</columns>
+
+					<items>
+						<ColumnListItem vAlign="Middle">
+							<cells>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</f:content>
+            <f:footer>
+                <OverflowToolbar>
+                    <ToolbarSpacer/>
+                    <ToggleButton style="ghost" text="Exportar Excel" type="Emphasized" press="exportExcel" />
+                    <ToggleButton style="ghost" text="Pontuar Jogadores" type="Emphasized" press="point" />
+                </OverflowToolbar>
+            </f:footer>
+		</f:DynamicPage>
+
+</mvc:View>

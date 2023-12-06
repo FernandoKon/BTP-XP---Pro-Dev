@@ -1,86 +1,120 @@
 <mvc:View controllerName="com.lab2dev.btpxp.controller.Ranking"
     xmlns:core="sap.ui.core"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:main="sap.ui.webc.main"
     xmlns="sap.m"
     xmlns:f="sap.f"
     xmlns:fb="sap.ui.comp.filterbar"
     height="100%">
 
-    <f:DynamicPage fitContent="true" showFooter="true" toggleHeaderOnTitleClick="false" >
-			<f:title >
-				<f:DynamicPageTitle >
-					<f:heading >
-						<Title text="Relatórios"/>               
-					</f:heading>	
-				</f:DynamicPageTitle>
-			</f:title>
-			<f:header>
-				<f:DynamicPageHeader pinnable="false">
-					<f:content>
-						<fb:FilterBar id="filterbar" header="Ranking" showFilterConfiguration="false"  showClearOnFB="true" >                
-							<fb:filterGroupItems>
-								<fb:FilterGroupItem name="Pesquisar" label="Pesquisar" groupName="Group1" visibleInFilterBar="true">
-									<fb:control>
-										<Input placeholder="Texto" />
-									</fb:control>
-								</fb:FilterGroupItem>
-								<fb:FilterGroupItem name="Empresas" label="Empresas" groupName="Group1" visibleInFilterBar="true">
-									<fb:control>
-										<MultiComboBox placeholder="Selecionar empresa"
-											name="Empresas"
-											selectionChange=".onSelectionChange"
-											items="{}"
-										>
-											<core:Item key="{key}" text="{name}"/>
-										</MultiComboBox>
-									</fb:control>
-								</fb:FilterGroupItem>
-								<fb:FilterGroupItem name="OrdernarPontuação" label="Ordernar pontuação" groupName="Group1" visibleInFilterBar="true">
-									<fb:control>
-										<MultiComboBox
-                                            placeholder="Maior para menor"
-											name="OrdernarPontuação"
-											selectionChange=".onSelectionChange"
-											items="{}"
-										>
-											<core:Item key="{key}" text="{name}"/>
-										</MultiComboBox>
-									</fb:control>
-								</fb:FilterGroupItem>
-							</fb:filterGroupItems>                       
-						</fb:FilterBar>
-					</f:content>
-				</f:DynamicPageHeader>
-			</f:header>
-			<f:content>
-				<Table
-					id="table"
-					inset="false"
-					items="{}"
-				>
-					<columns>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="Name"/>
-						</Column>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="Category"/>
-						</Column>
-						<Column minScreenWidth="Tablet" demandPopin="true">
-							<Text text="SupplierName"/>
-						</Column>
-					</columns>
+    <Page
+        id="idRanking"
+        showHeader="false"
+		class= "sapUiResponsivePadding sapUiContentPadding " >
+        
+        <content>
+            <fb:FilterBar id="filterbar" header="Ranking" 
+            showFilterConfiguration="false"  
+            useToolbar="false"
+            filterContainerWidth="6rem"
+            showClearOnFB="true" >                
+                <fb:filterGroupItems>
+                    <fb:FilterGroupItem name="Pesquisar" label="Pesquisar" groupName="Group1" visibleInFilterBar="true" >
+                        <fb:control>
+                            <Input placeholder="Texto" />
+                        </fb:control>
+                    </fb:FilterGroupItem>
+                    <fb:FilterGroupItem name="Empresas" label="Empresas" groupName="Group1" visibleInFilterBar="true">
+                        <fb:control>
+                            <MultiComboBox placeholder="Selecionar empresa"
+                                name="Empresas"
+                                selectionChange=".onSelectionChange"
+                                items=""
+                            >
+                                <core:Item key="{key}" text="{name}"/>
+                            </MultiComboBox>
+                        </fb:control>
+                    </fb:FilterGroupItem>
+                    <fb:FilterGroupItem name="OrdernarPontuação" label="Ordernar pontuação" groupName="Group1" visibleInFilterBar="true">
+                        <fb:control>
+                            <MultiComboBox
+                                placeholder="Maior para menor"
+                                name="OrdernarPontuação"
+                                selectionChange=".onSelectionChange"
+                                items=""
+                            >
+                                <core:Item key="{key}" text="{name}"/>
+                            </MultiComboBox>
+                        </fb:control>
+                    </fb:FilterGroupItem>
+                </fb:filterGroupItems>                       
+            </fb:FilterBar>
+        </content>
+        <content >            
+            <FlexBox justifyContent="Center">
+                <Table
+                id="table"
+                backgroundDesign="Solid"
+                width="auto"
+                class="sapUiMediumMargin roundedTable"
+                noDataText=""
+                items="{ranking>/}">
+                    <columns>
+                        <Column minScreenWidth="Tablet" demandPopin="true">
+                            <Text text="Ação"/>
+                        </Column>
+                        <Column minScreenWidth="Tablet" demandPopin="true">
+                            <Text text="Foto"/>
+                        </Column>
+                        <Column minScreenWidth="Tablet" demandPopin="true">
+                            <Text text="Nome"/>
+                        </Column>
+                        <Column minScreenWidth="Tablet" demandPopin="true">
+                            <Text text="Cargo"/>
+                        </Column>
+                        <Column minScreenWidth="Tablet" demandPopin="true">
+                            <Text text="Empresa"/>
+                        </Column>
+                        <Column minScreenWidth="Tablet" demandPopin="true">
+                            <Text text="Posição"/>
+                        </Column>
+                        <Column minScreenWidth="Tablet" demandPopin="true">
+                            <Text text="Pontuação"/>
+                        </Column>
+                        <Column minScreenWidth="Tablet" demandPopin="true">
+                            <Text text="Ação"/>
+                        </Column>
+                    </columns>
 
-					<items>
-						<ColumnListItem vAlign="Middle">
-							<cells>
-								<ObjectIdentifier title="{Name}" text="{ProductId}" />
-								<Text text="{Category}" />
-								<Text text="{SupplierName}" />
-							</cells>
-						</ColumnListItem>
-					</items>
-				</Table>
-			</f:content>
-		</f:DynamicPage>
+                    <items>
+                        <ColumnListItem vAlign="Middle">
+                            <cells>
+                                <CheckBox/>
+                                <main:Avatar
+                                    icon="person-placeholder"                                   
+                                    shape="Circle"/>
+                                <Text text="{ranking>name}" />
+                                <Text text="{ranking>job}" />
+                                <Text text="{ranking>company}" />
+                                <Text text="{= ${ranking>position} + 'º Lugar'}" />
+                                <VBox alignItems="Center">
+                                    <ObjectNumber number="{ranking>score}" />
+                                    <Text text="pontos"/>
+                                </VBox>
+                                <Link text="Visualizar" press="onLinkPress" />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </FlexBox>
+        </content>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <ToggleButton text="Exportar Excel" type="Emphasized" press="exportExcel" />
+                <ToggleButton text="Pontuar Jogadores" type="Emphasized" press="point" />
+            </OverflowToolbar>
+        </footer>
+    </Page>
 
 </mvc:View>

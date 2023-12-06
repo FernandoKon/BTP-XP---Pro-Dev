@@ -1,0 +1,52 @@
+{  
+    "Ranking":  [
+        {
+        "nome": "João",
+        "cargo": "Analista de Sistemas",
+        "empresa": "Lab2Dev",
+        "pontuacao": 1100
+        },
+        {
+        "nome": "Maria",
+        "cargo": "Desenvolvedora Front-end",
+        "empresa": "Lab2Dev",
+        "pontuacao": 1200
+        },
+        {
+        "nome": "Carlos",
+        "cargo": "Gerente de Projetos",
+        "empresa": "Lab2Dev",
+        "pontuacao": 1300
+        },
+        {
+        "nome": "Ana",
+        "cargo": "Analista de Dados",
+        "empresa": "Lab2Dev",
+        "pontuacao": 1400
+        },
+        {
+        "nome": "Lucas",
+        "cargo": "QA Engineer",
+        "empresa": "Lab2Dev",
+        "pontuacao": 1500
+        },
+        {
+        "nome": "Juliana",
+        "cargo": "Scrum Master",
+        "empresa": "Lab2Dev",
+        "pontuacao": 1600
+        },
+        {
+        "nome": "Rodrigo",
+        "cargo": "Desenvolvedor Back-end",
+        "empresa": "Lab2Dev",
+        "pontuacao": 1700
+        },
+        {
+        "nome": "Fernanda",
+        "cargo": "Arquiteta de Software",
+        "empresa": "Lab2Dev",
+        "pontuacao": 1800
+        }
+    ]
+    }

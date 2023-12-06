@@ -3,7 +3,7 @@
     xmlns="sap.m"
     height="100%">
     <Page showHeader="false">
-        <IconTabHeader
+        <IconTabBar
 			id="iconTabHeader"
 			mode="Inline"
             class="sapUiResponsiveContentPadding">
@@ -51,6 +51,7 @@
                 <IconTabFilter key="Relatórios" text="Relatórios">
                     <items>
                         <IconTabFilter key="Relatórios" text="Relatórios" select="onSelectRanking">
+                        
                         </IconTabFilter>
                         <IconTabFilter text="Check in">
                         </IconTabFilter>
@@ -59,7 +60,7 @@
                     </items>
                 </IconTabFilter>
             </items>
-		</IconTabHeader>
+		</IconTabBar>
         <Button press="onSelectRanking"/>
     </Page>
 </mvc:View>
