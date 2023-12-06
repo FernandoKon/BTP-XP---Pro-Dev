@@ -1,0 +1,41 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+	<Dialog
+		id="mainDialog"
+		title="Inserir pontuação em lote"
+        >
+		<content>
+            <VBox justifyContent="Center" alignItems="Center" 
+            class="sapUiLargeMargin sapUiResponsivePadding sapUiContentPadding">
+                <Text 
+                text="Preencha o formulário para pontuar os usuários selecionados previamente" 
+                wrapping="true"/>
+                <Label text="Nome da tarefa"/>
+                <Input placeholder="Ex: Quiz diário"/>
+                <Label text="Tipo da tarefa"/>
+                <Input placeholder="Tarefa"/>
+                <Label text="Pontuação"/>
+                <Input id="idInputPontuacao" value="{addPoints>/points}"/>
+                <HBox>
+                    <core:Icon src="sap-icon://alert" class="sapUiTinyMarginEnd"/>
+                    <Text text= "Lembre-se que após confirmar a inserção da pontuação,"/>
+                    <Text text= " essa pontuação não poderá ser desfeita." class="textBold"/>
+                </HBox>
+                <HBox>
+                    <core:Icon src="sap-icon://alert" class="sapUiTinyMarginEnd"/>
+                    <Text text= "Todos os usuários selecionados receberão a mesma pontuação"/>
+                </HBox>
+
+            </VBox>
+		</content>
+		<footer>
+			<OverflowToolbar class= "sapUiResponsivePadding sapUiContentPadding sapUiMediumMarginBeginEnd ">
+                <ToolbarSpacer/>
+                <Button text="Confirmar pontuação" type="Emphasized" press="onConfirmPontuacao" />
+            </OverflowToolbar>
+		</footer>
+	</Dialog>
+</core:FragmentDefinition>

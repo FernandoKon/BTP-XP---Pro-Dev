@@ -14,8 +14,7 @@
             <HBox>
                 <VBox>
                     <Label text="Pesquisar"/>
-                    <Input placeholder="Texto" liveChange="onSearch">
-                    </Input>
+                    <Input placeholder="Texto" liveChange="onSearch"/>
                     <layoutData>
                         <FlexItemData styleClass="sapUiTinyMarginEnd"/>
                     </layoutData>
@@ -70,28 +69,27 @@
                 backgroundDesign="Solid"
                 width="auto"
                 class="sapUiMediumMargin roundedTable"
-                noDataText=""
                 items="{ranking>/}">
                     <columns>
-                        <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Column minScreenWidth="Tablet" demandPopin="true" width="5%">
                             <Text text="Ação"/>
                         </Column>
-                        <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Column minScreenWidth="Tablet" demandPopin="true" width="8%" vAlign="Middle">
                             <Text text="Foto"/>
                         </Column>
                         <Column minScreenWidth="Tablet" demandPopin="true">
                             <Text text="Nome"/>
                         </Column>
-                        <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
                             <Text text="Cargo"/>
                         </Column>
-                        <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
                             <Text text="Empresa"/>
                         </Column>
-                        <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Column minScreenWidth="Tablet" demandPopin="true" hAlign="End">
                             <Text text="Posição"/>
                         </Column>
-                        <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
                             <Text text="Pontuação"/>
                         </Column>
                         <Column minScreenWidth="Tablet" demandPopin="true">
@@ -102,11 +100,11 @@
                     <items>
                         <ColumnListItem vAlign="Middle">
                             <cells>
-                                <CheckBox/>
+                                <CheckBox selected="{ranking>selected}" select="onItemSelect"/>
                                 <main:Avatar
                                     icon="person-placeholder"                                   
                                     shape="Circle"/>
-                                <Text text="{ranking>name}" />
+                                <Text text="{ranking>name}" class="textBold" />
                                 <Text text="{ranking>job}" />
                                 <Text text="{ranking>company}" />
                                 <Text text="{= ${ranking>position} + 'º Lugar'}" />
@@ -125,7 +123,7 @@
             <OverflowToolbar class= "sapUiResponsivePadding sapUiContentPadding sapUiMediumMarginBeginEnd ">
                 <ToolbarSpacer/>
                 <Button text="Exportar Excel" type="Emphasized" press="exportExcel" icon="sap-icon://excel-attachment" iconFirst="false" />
-                <Button text="Pontuar Jogadores" type="Emphasized" press="point" />
+                <Button text="Pontuar Jogadores" type="Emphasized" press="onOpenDialog" />
             </OverflowToolbar>
         </footer>
     </Page>
