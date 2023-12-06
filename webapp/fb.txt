@@ -1,0 +1,38 @@
+<fb:FilterBar id="filterbar" header="Ranking" 
+            showFilterConfiguration="false"  
+            useToolbar="false"
+            filterContainerWidth="6rem"
+            showClearOnFB="true" >                
+                <fb:filterGroupItems>
+                    <fb:FilterGroupItem name="Pesquisar" label="Pesquisar" groupName="Group1" visibleInFilterBar="true" >
+                        <fb:control>
+                            <Input placeholder="Texto" liveChange="onSearch"/>
+                        </fb:control>
+                    </fb:FilterGroupItem>
+                    <fb:FilterGroupItem name="Empresas" label="Empresas" groupName="Group1" visibleInFilterBar="true">
+                        <fb:control>
+                            <MultiComboBox 
+                                id="idMultiComboBoxEmpresas"
+                                placeholder="Selecionar empresa"
+                                name="Empresas"
+                                selectionChange=".onSelectionChange"
+                                items="{empresas>/}"
+                            >
+                                <core:Item key="{company}" text="{company}"/>
+                            </MultiComboBox>
+                        </fb:control>
+                    </fb:FilterGroupItem>
+                    <fb:FilterGroupItem name="OrdernarPontuação" label="Ordernar pontuação" groupName="Group1" visibleInFilterBar="true">
+                        <fb:control>
+                            <MultiComboBox
+                                placeholder="Maior para menor"
+                                name="OrdernarPontuação"
+                                selectionChange=".onSelectionChange"
+                                items=""
+                            >
+                                <core:Item key="{key}" text="{name}"/>
+                            </MultiComboBox>
+                        </fb:control>
+                    </fb:FilterGroupItem>
+                </fb:filterGroupItems>
+            </fb:FilterBar>

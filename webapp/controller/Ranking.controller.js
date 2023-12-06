@@ -1,12 +1,14 @@
 sap.ui.define([
     "sap/ui/core/mvc/Controller",
     "sap/ui/model/json/JSONModel",
-    "com/lab2dev/btpxp/model/formatter"
+    "com/lab2dev/btpxp/model/formatter",
+    "sap/ui/model/Filter",         
+    "sap/ui/model/FilterOperator",
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, JSONModel,formatter) {
+    function (Controller, JSONModel,formatter, Filter, FilterOperator) {
         "use strict";
 
         return Controller.extend("com.lab2dev.btpxp.controller.Ranking", {
@@ -24,7 +26,7 @@ sap.ui.define([
                     {
                       "name": "Maria",
                       "job": "Desenvolvedora Front-end",
-                      "company": "Lab2Dev",
+                      "company": "SAP",
                       "score": 1200
                     },
                     {
@@ -36,13 +38,13 @@ sap.ui.define([
                     {
                       "name": "Juliana",
                       "job": "Scrum Master",
-                      "company": "Lab2Dev",
+                      "company": "SAP",
                       "score": 1600
                     },
                     {
                       "name": "Ana",
                       "job": "Analista de Dados",
-                      "company": "Lab2Dev",
+                      "company": "SAP",
                       "score": 1400
                     },
                     {
@@ -63,6 +65,18 @@ sap.ui.define([
                       "company": "Lab2Dev",
                       "score": 1700
                     },
+                    {
+                      "name": "Matheus",
+                      "job": "Desenvolvedor Mobile",
+                      "company": "Lab2Dev",
+                      "score": 1700
+                    },
+                    {
+                      "name": "Thiago",
+                      "job": "Desenvolvedor Front-end",
+                      "company": "Sap",
+                      "score": 900
+                    },
                     
                 ];
                   
@@ -74,9 +88,46 @@ sap.ui.define([
                 
                 const oModel = new JSONModel(Ranking);
 
-                this.getView().setModel(oModel, "ranking")
+                this.getView().setModel(oModel, "ranking");
+
+                 // Obter a lista de empresas do ranking
+                const empresas = Ranking.map(item => item.company);
+                
+                // Remover empresas duplicadas (opcional, dependendo da sua lógica)
+                const empresasSemDuplicatas = [...new Set(empresas)];
+
+                // Criar um modelo para a lista de empresas
+                const oEmpresasModel = new JSONModel(empresasSemDuplicatas);
+                this.getView().setModel(oEmpresasModel, "empresas");
+
+                // Obter a referência ao MultiComboBox
+                const oMultiComboBox = this.byId("idMultiComboBoxEmpresas");
+
+                // Vincular a lista de empresas ao MultiComboBox
+                oMultiComboBox.bindItems({
+                    path: "empresas>/",
+                    template: new sap.ui.core.Item({
+                        key: "{empresas>}",
+                        text: "{empresas>}"
+                    })
+                });
                 
             },
+
+            onSearch: function (oEvent) {
+              // add filter for search
+              const aFilters = [];
+              const sQuery = oEvent.getSource().getValue();
+              if (sQuery && sQuery.length > 0) {
+                  const filter = new Filter("name", FilterOperator.Contains, sQuery);
+                  aFilters.push(filter);
+              }
+  
+              // update list binding
+              const oTable = this.byId("idTable");
+              const oBinding = oTable.getBinding("items");
+              oBinding.filter(aFilters);
+          },
             
         });
     });

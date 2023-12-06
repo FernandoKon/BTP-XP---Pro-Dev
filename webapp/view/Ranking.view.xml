@@ -4,56 +4,69 @@
     xmlns:main="sap.ui.webc.main"
     xmlns="sap.m"
     xmlns:f="sap.f"
-    xmlns:fb="sap.ui.comp.filterbar"
     height="100%">
 
     <Page
         id="idRanking"
         showHeader="false"
-		class= "sapUiResponsivePadding sapUiContentPadding " >
-        
+		class= "sapUiResponsivePadding sapUiContentPadding sapUiMediumMarginBeginEnd " >       
         <content>
-            <fb:FilterBar id="filterbar" header="Ranking" 
-            showFilterConfiguration="false"  
-            useToolbar="false"
-            filterContainerWidth="6rem"
-            showClearOnFB="true" >                
-                <fb:filterGroupItems>
-                    <fb:FilterGroupItem name="Pesquisar" label="Pesquisar" groupName="Group1" visibleInFilterBar="true" >
-                        <fb:control>
-                            <Input placeholder="Texto" />
-                        </fb:control>
-                    </fb:FilterGroupItem>
-                    <fb:FilterGroupItem name="Empresas" label="Empresas" groupName="Group1" visibleInFilterBar="true">
-                        <fb:control>
-                            <MultiComboBox placeholder="Selecionar empresa"
-                                name="Empresas"
-                                selectionChange=".onSelectionChange"
-                                items=""
-                            >
-                                <core:Item key="{key}" text="{name}"/>
-                            </MultiComboBox>
-                        </fb:control>
-                    </fb:FilterGroupItem>
-                    <fb:FilterGroupItem name="OrdernarPontuação" label="Ordernar pontuação" groupName="Group1" visibleInFilterBar="true">
-                        <fb:control>
-                            <MultiComboBox
-                                placeholder="Maior para menor"
-                                name="OrdernarPontuação"
-                                selectionChange=".onSelectionChange"
-                                items=""
-                            >
-                                <core:Item key="{key}" text="{name}"/>
-                            </MultiComboBox>
-                        </fb:control>
-                    </fb:FilterGroupItem>
-                </fb:filterGroupItems>                       
-            </fb:FilterBar>
+            <HBox>
+                <VBox>
+                    <Label text="Pesquisar"/>
+                    <Input placeholder="Texto" liveChange="onSearch">
+                    </Input>
+                    <layoutData>
+                        <FlexItemData styleClass="sapUiTinyMarginEnd"/>
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="Empresas"/>
+                    <MultiComboBox
+                        id="idMultiComboBoxEmpresas"
+                        placeholder="Selecionar empresa"
+                        name="Empresas"
+                        selectionChange=".onSelectionChange"
+                        items="{empresas>/}">
+                        <core:Item key="{empresas>}" text="{empresas>}" />
+                    </MultiComboBox>
+                    <layoutData>
+                        <FlexItemData styleClass="sapUiTinyMarginBeginEnd"/>
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label text="Ordenar Pontuação"/>
+                    <MultiComboBox
+                        id="idMultiComboBoxOrdernarPontuacao"
+                        placeholder="Maior para menor"
+                        name="OrdernarPontuacao"
+                        selectionChange=".onSelectionChange"
+                        items="{pontuacoes>/}">
+                        <core:Item key="{pontuacoes>key}" text="{pontuacoes>name}" />
+                    </MultiComboBox>
+                    <layoutData>
+                        <FlexItemData styleClass="sapUiTinyMarginBeginEnd"/>
+                    </layoutData>
+                </VBox>
+                <VBox>
+                    <Label/>
+                    <Button text="Iniciar" 
+                        type="Emphasized" 
+                        press="" 
+                        class="sapUiTinyMarginBeginEnd"/>
+                </VBox>
+                <VBox>
+                    <Label/>
+                    <Button text="Limpar Filtros"
+                        press="" 
+                        class="sapUiTinyMarginBeginEnd"/>
+                </VBox>
+            </HBox>
         </content>
         <content >            
             <FlexBox justifyContent="Center">
                 <Table
-                id="table"
+                id="idTable"
                 backgroundDesign="Solid"
                 width="auto"
                 class="sapUiMediumMargin roundedTable"
@@ -108,11 +121,11 @@
                 </Table>
             </FlexBox>
         </content>
-        <footer>
-            <OverflowToolbar>
+        <footer >
+            <OverflowToolbar class= "sapUiResponsivePadding sapUiContentPadding sapUiMediumMarginBeginEnd ">
                 <ToolbarSpacer/>
-                <ToggleButton text="Exportar Excel" type="Emphasized" press="exportExcel" />
-                <ToggleButton text="Pontuar Jogadores" type="Emphasized" press="point" />
+                <Button text="Exportar Excel" type="Emphasized" press="exportExcel" icon="sap-icon://excel-attachment" iconFirst="false" />
+                <Button text="Pontuar Jogadores" type="Emphasized" press="point" />
             </OverflowToolbar>
         </footer>
     </Page>
