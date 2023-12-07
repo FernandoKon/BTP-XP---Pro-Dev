@@ -9,12 +9,12 @@
     <Page
         id="idRanking"
         showHeader="false"
-		class= "sapUiResponsivePadding sapUiContentPadding sapUiMediumMarginBeginEnd " >       
+		class= "sapUiResponsivePadding sapUiContentPadding ">  
         <content>
             <HBox>
                 <VBox>
                     <Label text="Pesquisar"/>
-                    <Input placeholder="Texto" liveChange="onSearch"/>
+                    <Input placeholder="Texto" id="idInputPesquisar" />
                     <layoutData>
                         <FlexItemData styleClass="sapUiTinyMarginEnd"/>
                     </layoutData>
@@ -25,7 +25,6 @@
                         id="idMultiComboBoxEmpresas"
                         placeholder="Selecionar empresa"
                         name="Empresas"
-                        selectionChange=".onSelectionChange"
                         items="{empresas>/}">
                         <core:Item key="{empresas>}" text="{empresas>}" />
                     </MultiComboBox>
@@ -35,14 +34,15 @@
                 </VBox>
                 <VBox>
                     <Label text="Ordenar Pontuação"/>
-                    <MultiComboBox
-                        id="idMultiComboBoxOrdernarPontuacao"
-                        placeholder="Maior para menor"
+                    <Select
+                        id="idComboBoxOrdernarPontuacao"
+                        
                         name="OrdernarPontuacao"
-                        selectionChange=".onSelectionChange"
-                        items="{pontuacoes>/}">
+                        items="{pontuacoes>/}"
+                        selectedKey="maiorMenor"
+                        >
                         <core:Item key="{pontuacoes>key}" text="{pontuacoes>name}" />
-                    </MultiComboBox>
+                    </Select>
                     <layoutData>
                         <FlexItemData styleClass="sapUiTinyMarginBeginEnd"/>
                     </layoutData>
@@ -51,13 +51,13 @@
                     <Label/>
                     <Button text="Iniciar" 
                         type="Emphasized" 
-                        press="" 
+                        press="onSearch" 
                         class="sapUiTinyMarginBeginEnd"/>
                 </VBox>
                 <VBox>
                     <Label/>
                     <Button text="Limpar Filtros"
-                        press="" 
+                        press="onClearFiltersPress" 
                         class="sapUiTinyMarginBeginEnd"/>
                 </VBox>
             </HBox>
@@ -100,10 +100,8 @@
                     <items>
                         <ColumnListItem vAlign="Middle">
                             <cells>
-                                <CheckBox selected="{ranking>selected}" select="onItemSelect"/>
-                                <main:Avatar
-                                    icon="person-placeholder"                                   
-                                    shape="Circle"/>
+                                <CheckBox selected="{ranking>selected}" />
+                                <main:Avatar icon="person-placeholder" shape="Circle"/>
                                 <Text text="{ranking>name}" class="textBold" />
                                 <Text text="{ranking>job}" />
                                 <Text text="{ranking>company}" />
@@ -122,8 +120,8 @@
         <footer >
             <OverflowToolbar class= "sapUiResponsivePadding sapUiContentPadding sapUiMediumMarginBeginEnd ">
                 <ToolbarSpacer/>
-                <Button text="Exportar Excel" type="Emphasized" press="exportExcel" icon="sap-icon://excel-attachment" iconFirst="false" />
-                <Button text="Pontuar Jogadores" type="Emphasized" press="onOpenDialog" />
+                <Button text="Exportar Excel" type="Emphasized" press="onExportToExcel" icon="sap-icon://excel-attachment" iconFirst="false" />
+                <Button text="Pontuar Jogadores" type="Emphasized" press="onOpenDialog"/>
             </OverflowToolbar>
         </footer>
     </Page>

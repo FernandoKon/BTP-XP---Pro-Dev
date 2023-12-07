@@ -5,8 +5,7 @@
     <Page showHeader="false">
         <IconTabBar
 			id="iconTabHeader"
-			mode="Inline"
-            class="sapUiResponsiveContentPadding">
+            class="sapUiResponsiveContentPadding sapUiNoContentPadding">
 			<layoutData>
 				<OverflowToolbarLayoutData priority="NeverOverflow" shrinkable="true" />
 			</layoutData>
@@ -50,8 +49,7 @@
 
                 <IconTabFilter key="Relatórios" text="Relatórios">
                     <items>
-                        <IconTabFilter key="Relatórios" text="Relatórios" select="onSelectRanking">
-                        
+                        <IconTabFilter key="Relatórios" text="Relatórios">
                         </IconTabFilter>
                         <IconTabFilter text="Check in">
                         </IconTabFilter>
@@ -62,5 +60,6 @@
             </items>
 		</IconTabBar>
         <Button press="onSelectRanking"/>
+
     </Page>
 </mvc:View>

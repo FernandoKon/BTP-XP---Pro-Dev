@@ -34,7 +34,7 @@
 		<footer>
 			<OverflowToolbar class= "sapUiResponsivePadding sapUiContentPadding sapUiMediumMarginBeginEnd ">
                 <ToolbarSpacer/>
-                <Button text="Confirmar pontuação" type="Emphasized" press="onConfirmPontuacao" />
+                <Button text="Confirmar pontuação" type="Emphasized" press="onConfirm" />
             </OverflowToolbar>
 		</footer>
 	</Dialog>
