@@ -11,7 +11,7 @@ sap.ui.define(
     "sap/ui/core/Item",
     "sap/ui/model/Sorter",
     "sap/ui/export/Spreadsheet",
-    'sap/ui/export/library',
+    "sap/ui/export/library",
   ],
   /**
    * @param {typeof sap.ui.core.mvc.Controller} Controller
@@ -44,120 +44,240 @@ sap.ui.define(
             job: "Analista de Sistemas",
             company: "Lab2Dev",
             score: 1100,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "joao@lab2dev.com",
+            portifolio: "www.figma.com/joao",
+            site: "www.joao.com.br",
           },
           {
             name: "Maria",
             job: "Desenvolvedora Front-end",
             company: "SAP",
             score: 1200,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "maria@sap.com",
+            portifolio: "www.figma/maria.com",
+            site: "www.maria.com",
           },
           {
             name: "Carlos",
             job: "Gerente de Projetos",
             company: "Lab2Dev",
             score: 1300,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "carlos@lab2dev.com",
+            portifolio: "www.figma/carlos.com",
+            site: "www.carlos.com",
           },
           {
             name: "Juliana",
             job: "Scrum Master",
             company: "SAP",
             score: 1600,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "juliana@sap.com",
+            portifolio: "www.figma/juliana.com",
+            site: "www.juliana.com",
           },
           {
             name: "Ana",
             job: "Analista de Dados",
             company: "SAP",
             score: 1400,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "ana@sap.com",
+            portifolio: "www.figma/ana.com",
+            site: "www.ana.com",
           },
           {
             name: "Lucas",
             job: "QA Engineer",
             company: "Lab2Dev",
             score: 1500,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "lucas@lab2dev.com",
+            portifolio: "www.figma/lucas.com",
+            site: "www.lucas.com",
           },
           {
             name: "Fernanda",
             job: "Arquiteta de Software",
             company: "Lab2Dev",
             score: 1800,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "fernanda@lab2dev.com",
+            portifolio: "www.figma/fernanda.com",
+            site: "www.fernanda.com",
           },
           {
             name: "Rodrigo",
             job: "Desenvolvedor Back-end",
             company: "Lab2Dev",
             score: 1700,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "rodrigo@lab2dev.com",
+            portifolio: "www.figma/rodrigo.com",
+            site: "www.rodrigo.com",
           },
           {
             name: "Thiago",
             job: "Desenvolvedor Front-end",
             company: "SAP",
             score: 900,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "thiago@sap.com",
+            portifolio: "www.figma/thiago.com",
+            site: "www.thiago.com",
           },
           {
             name: "Matheus",
             job: "Desenvolvedor Mobile",
             company: "Lab2Dev",
             score: 2000,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "matheus@lab2dev.com",
+            portifolio: "www.figma/matheus.com",
+            site: "www.matheus.com",
           },
           {
             name: "João Silva",
             job: "Analista de Sistemas",
             company: "SAP",
             score: 1100,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "joaosilva@sap.com",
+            portifolio: "www.figma/joaosilva.com",
+            site: "www.joaosilva.com",
           },
           {
             name: "Maria Oliveira",
             job: "Desenvolvedora Front-end",
             company: "SAP",
             score: 1200,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "mariaoliveira@sap.com",
+            portifolio: "www.figma/mariaoliveira.com",
+            site: "www.mariaoliveira.com",
           },
           {
             name: "Fernanda Oliveira",
             job: "Gerente de Projetos",
             company: "SAP",
             score: 1300,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "fernandaoliveira@sap.com",
+            portifolio: "www.figma/fernandaoliveira.com",
+            site: "www.fernandaoliveira.com",
           },
           {
             name: "Juliana Santos",
             job: "Scrum Master",
             company: "Lab2Dev",
             score: 1600,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "julianasantos@lab2dev.com",
+            portifolio: "www.figma/julianasantos.com",
+            site: "www.julianasantos.com",
           },
           {
             name: "Ana Souza",
             job: "Analista de Dados",
             company: "Lab2Dev",
             score: 1400,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "anasouza@lab2dev.com",
+            portifolio: "www.figma/anasouza.com",
+            site: "www.anasouza.com",
           },
           {
             name: "Lucas Costa",
             job: "QA Engineer",
             company: "Lab2Dev",
             score: 1500,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "lucascosta@lab2dev.com",
+            portifolio: "www.figma/lucascosta.com",
+            site: "www.lucascosta.com",
           },
           {
             name: "Fernanda Lima",
             job: "Arquiteta de Software",
             company: "Lab2Dev",
             score: 1800,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "fernandalima@lab2dev.com",
+            portifolio: "www.figma/fernandalima.com",
+            site: "www.fernandalima.com",
           },
           {
             name: "Rodrigo Almeida",
             job: "Desenvolvedor Back-end",
             company: "Lab2Dev",
             score: 1700,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "rodrigoalmeida@lab2dev.com",
+            portifolio: "www.figma/rodrigoalmeida.com",
+            site: "www.rodrigoalmeida.com",
           },
           {
             name: "Thiago Pereira",
             job: "Desenvolvedor Front-end",
             company: "Lab2Dev",
             score: 900,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "thiagopereira@lab2dev.com",
+            portifolio: "www.figma/thiagopereira.com",
+            site: "www.thiagopereira.com",
           },
           {
             name: "Matheus Oliveira",
             job: "Desenvolvedor Mobile",
             company: "Lab2Dev",
             score: 2000,
+            biografia:
+              "Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae",
+            telefone: "+55 11 94002 8922",
+            email: "matheusoliveira@lab2dev.com",
+            portifolio: "www.figma/matheusoliveira.com",
+            site: "www.matheusoliveira.com",
           },
         ];
 
@@ -410,6 +530,17 @@ sap.ui.define(
         oSheet.build().finally(function () {
           oSheet.destroy();
         });
+      },
+
+      onLinkPress: function (oEvent) {
+        const oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+        const oSelectedItem = oEvent.getSource();
+        const sName = oSelectedItem.getBindingContext("ranking").getProperty("name");
+
+        oRouter.navTo("UserProfile", {
+          Name: sName,
+        });
+        console.log("navega")
       },
     });
   }

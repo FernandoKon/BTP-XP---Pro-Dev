@@ -3,6 +3,7 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns:main="sap.ui.webc.main"
     xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
     xmlns:f="sap.f"
     height="100%">
 
@@ -10,7 +11,69 @@
         id="idRanking"
         showHeader="false"
 		class= "sapUiResponsivePadding sapUiContentPadding ">  
-        <content>
+        <IconTabBar
+			id="iconTabHeader"
+            class="sapUiResponsiveContentPadding sapUiNoContentPadding">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="NeverOverflow" shrinkable="true" />
+			</layoutData>
+            <items>
+                <IconTabFilter key="Cadastro" text="Cadastro">
+                    <items>
+                        <IconTabFilter text="Novos Usuários">
+                        </IconTabFilter>
+                        <IconTabFilter text="Aprovação">
+                        </IconTabFilter>
+                    </items>
+                </IconTabFilter>
+
+                <IconTabFilter key="Administração" text="Administração">
+                    <items>
+                        <IconTabFilter text="Eventos">
+                        </IconTabFilter>
+                        <IconTabFilter text="Agendas">
+                        </IconTabFilter>
+                        <IconTabFilter text="Sessões">
+                        </IconTabFilter>
+                        <IconTabFilter text="Empresas">
+                        </IconTabFilter>
+                        <IconTabFilter text="Pacotes">
+                        </IconTabFilter>
+                        <IconTabFilter text="Repositório">
+                        </IconTabFilter>
+                        <IconTabFilter text="Usuários">
+                        </IconTabFilter>
+                    </items>
+                </IconTabFilter>
+
+                <IconTabFilter key="Gamificação" text="Gamificação">
+                    <items>
+                        <IconTabFilter text="Tarefas">
+                        </IconTabFilter>
+                        <IconTabFilter text="Trilhas">
+                        </IconTabFilter>
+                    </items>
+                </IconTabFilter>
+
+                <IconTabFilter key="Relatórios" text="Relatórios">
+                    <items>
+                        <IconTabFilter key="Relatórios" text="Relatórios">
+                        </IconTabFilter>
+                        <IconTabFilter text="Check in">
+                        </IconTabFilter>
+                        <IconTabFilter text="Feedbacks">
+                        </IconTabFilter>
+                    </items>
+                </IconTabFilter>
+            </items>
+		</IconTabBar>
+        <l:VerticalLayout class="sapUiMediumMarginBegin">
+            <HeaderContainer>
+                <VBox>
+                    <Title text="Relatórios" class="sapUiTinyMarginTopBottom textBold" titleStyle="H3"/>
+                    <Title text="Ranking" class="sapUiTinyMarginBottom " titleStyle="H4"/>
+                </VBox>
+            </HeaderContainer>
             <HBox>
                 <VBox>
                     <Label text="Pesquisar"/>
@@ -52,6 +115,7 @@
                     <Button text="Iniciar" 
                         type="Emphasized" 
                         press="onSearch" 
+                        width="89px"
                         class="sapUiTinyMarginBeginEnd"/>
                 </VBox>
                 <VBox>
@@ -61,20 +125,21 @@
                         class="sapUiTinyMarginBeginEnd"/>
                 </VBox>
             </HBox>
-        </content>
+        </l:VerticalLayout>
+        
         <content >            
             <FlexBox justifyContent="Center">
                 <Table
                 id="idTable"
                 backgroundDesign="Solid"
                 width="auto"
-                class="sapUiMediumMargin roundedTable"
+                class="sapUiMediumMargin sapUiResponsivePadding"
                 items="{ranking>/}">
                     <columns>
-                        <Column minScreenWidth="Tablet" demandPopin="true" width="5%">
+                        <Column minScreenWidth="Tablet" demandPopin="true">
                             <Text text="Ação"/>
                         </Column>
-                        <Column minScreenWidth="Tablet" demandPopin="true" width="8%" vAlign="Middle">
+                        <Column minScreenWidth="Tablet" demandPopin="true"  vAlign="Middle">
                             <Text text="Foto"/>
                         </Column>
                         <Column minScreenWidth="Tablet" demandPopin="true">
@@ -92,13 +157,13 @@
                         <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
                             <Text text="Pontuação"/>
                         </Column>
-                        <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
                             <Text text="Ação"/>
                         </Column>
                     </columns>
 
-                    <items>
-                        <ColumnListItem vAlign="Middle">
+                    <items >
+                        <ColumnListItem vAlign="Middle" >
                             <cells>
                                 <CheckBox selected="{ranking>selected}" />
                                 <main:Avatar icon="person-placeholder" shape="Circle"/>

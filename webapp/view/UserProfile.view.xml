@@ -1,0 +1,92 @@
+<mvc:View controllerName="com.lab2dev.btpxp.controller.UserProfile"
+    xmlns:core="sap.ui.core"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:main="sap.ui.webc.main"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.f"
+    height="100%">
+
+    <Page
+        id="idUserProfile"
+        showHeader="false"
+		class= "sapUiResponsivePadding sapUiContentPadding ">  
+        <IconTabBar
+			id="iconTabHeader"
+            class="sapUiResponsiveContentPadding sapUiNoContentPadding">
+			<layoutData>
+				<OverflowToolbarLayoutData priority="NeverOverflow" shrinkable="true" />
+			</layoutData>
+            <items>
+                <IconTabFilter key="Cadastro" text="Cadastro">
+                    <items>
+                        <IconTabFilter text="Novos Usuários">
+                        </IconTabFilter>
+                        <IconTabFilter text="Aprovação">
+                        </IconTabFilter>
+                    </items>
+                </IconTabFilter>
+
+                <IconTabFilter key="Administração" text="Administração">
+                    <items>
+                        <IconTabFilter text="Eventos">
+                        </IconTabFilter>
+                        <IconTabFilter text="Agendas">
+                        </IconTabFilter>
+                        <IconTabFilter text="Sessões">
+                        </IconTabFilter>
+                        <IconTabFilter text="Empresas">
+                        </IconTabFilter>
+                        <IconTabFilter text="Pacotes">
+                        </IconTabFilter>
+                        <IconTabFilter text="Repositório">
+                        </IconTabFilter>
+                        <IconTabFilter text="Usuários">
+                        </IconTabFilter>
+                    </items>
+                </IconTabFilter>
+
+                <IconTabFilter key="Gamificação" text="Gamificação">
+                    <items>
+                        <IconTabFilter text="Tarefas">
+                        </IconTabFilter>
+                        <IconTabFilter text="Trilhas">
+                        </IconTabFilter>
+                    </items>
+                </IconTabFilter>
+
+                <IconTabFilter key="Relatórios" text="Relatórios">
+                    <items>
+                        <IconTabFilter key="Relatórios" text="Relatórios">
+                        </IconTabFilter>
+                        <IconTabFilter text="Check in">
+                        </IconTabFilter>
+                        <IconTabFilter text="Feedbacks">
+                        </IconTabFilter>
+                    </items>
+                </IconTabFilter>
+            </items>
+		</IconTabBar>
+        <l:VerticalLayout class="sapUiMediumMarginBegin">
+            <HeaderContainer>
+                <VBox>
+                    <Title text="Relatórios" class="sapUiTinyMarginTopBottom textBold" titleStyle="H3"/>
+                    <Title text="Ranking > Perfil do usuário" class="sapUiTinyMarginBottom " titleStyle="H4"/>
+                </VBox>
+            </HeaderContainer>
+            
+        </l:VerticalLayout>
+        
+        <content >            
+            
+        </content>
+        <footer >
+            <OverflowToolbar class= "sapUiResponsivePadding sapUiContentPadding sapUiMediumMarginBeginEnd ">
+                <ToolbarSpacer/>
+                <Button text="Exportar Excel" type="Emphasized" press="onExportToExcel" icon="sap-icon://excel-attachment" iconFirst="false" />
+                <Button text="Pontuar Jogadores" type="Emphasized" press="onOpenDialog"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+
+</mvc:View>

@@ -6,33 +6,35 @@
 	<Dialog
 		id="mainDialog"
 		title="Inserir pontuação em lote"
+        contentWidth="474px"
         >
 		<content>
-            <VBox justifyContent="Center" alignItems="Center" 
-            class="sapUiLargeMargin sapUiResponsivePadding sapUiContentPadding">
+            <FlexBox direction="Column" alignItems="Center" 
+            class="sapUiSmallMargin sapUiResponsivePadding sapUiContentPadding">
                 <Text 
                 text="Preencha o formulário para pontuar os usuários selecionados previamente" 
-                wrapping="true"/>
-                <Label text="Nome da tarefa"/>
+                wrapping="true" textAlign="Center" class="sapUiLargeMarginBeginEnd"/>
+                <Label text="Nome da tarefa" required="true" class="sapUiMediumMarginTop"/>
                 <Input placeholder="Ex: Quiz diário"/>
-                <Label text="Tipo da tarefa"/>
-                <Input placeholder="Tarefa"/>
-                <Label text="Pontuação"/>
-                <Input id="idInputPontuacao" value="{addPoints>/points}"/>
-                <HBox>
-                    <core:Icon src="sap-icon://alert" class="sapUiTinyMarginEnd"/>
-                    <Text text= "Lembre-se que após confirmar a inserção da pontuação,"/>
-                    <Text text= " essa pontuação não poderá ser desfeita." class="textBold"/>
+                <Label text="Tipo da tarefa" required="true"/>
+                <Input placeholder="Ex: Tarefa"/>
+                <Label text="Pontuação" required="true"/>
+                <Input id="idInputPontuacao" value="{addPoints>/points}" class="sapUiMediumMarginBottom"/>
+                <HBox alignItems="Center"
+				justifyContent="Start">
+                    <core:Icon src="sap-icon://alert" class="sapUiTinyMarginEnd" color="#ff8c00"/>
+                    <Text text= "Lembre-se que após confirmar a inserção da pontuação, essa pontuação não poderá ser desfeita."/>
                 </HBox>
-                <HBox>
-                    <core:Icon src="sap-icon://alert" class="sapUiTinyMarginEnd"/>
+                <HBox alignItems="Center"
+				justifyContent="Start">
+                    <core:Icon src="sap-icon://alert" class="sapUiTinyMarginEnd" color="#ff8c00"/>
                     <Text text= "Todos os usuários selecionados receberão a mesma pontuação"/>
                 </HBox>
 
-            </VBox>
+            </FlexBox>
 		</content>
 		<footer>
-			<OverflowToolbar class= "sapUiResponsivePadding sapUiContentPadding sapUiMediumMarginBeginEnd ">
+			<OverflowToolbar class= "sapUiResponsivePadding sapUiContentPadding">
                 <ToolbarSpacer/>
                 <Button text="Confirmar pontuação" type="Emphasized" press="onConfirm" />
             </OverflowToolbar>
