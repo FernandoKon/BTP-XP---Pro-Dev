@@ -15,9 +15,9 @@
                 text="Preencha o formulário para pontuar os usuários selecionados previamente" 
                 wrapping="true" textAlign="Center" class="sapUiLargeMarginBeginEnd"/>
                 <Label text="Nome da tarefa" required="true" class="sapUiMediumMarginTop"/>
-                <Input placeholder="Ex: Quiz diário"/>
+                <Input id="nomeTarefa" placeholder="Ex: Quiz diário"/>
                 <Label text="Tipo da tarefa" required="true"/>
-                <Input placeholder="Ex: Tarefa"/>
+                <Input id="tipoTarefa" placeholder="Ex: Tarefa"/>
                 <Label text="Pontuação" required="true"/>
                 <Input id="idInputPontuacao" value="{addPoints>/points}" class="sapUiMediumMarginBottom"/>
                 <HBox alignItems="Center"

@@ -70,7 +70,7 @@
         <l:VerticalLayout class="sapUiMediumMarginBegin">
             <HeaderContainer>
                 <VBox>
-                    <Title text="Relatórios" class="sapUiTinyMarginTopBottom textBold" titleStyle="H3"/>
+                    <Title text="Relatórios {ranking>/name}" class="sapUiTinyMarginTopBottom textBold" titleStyle="H3"/>
                     <Title text="Ranking" class="sapUiTinyMarginBottom " titleStyle="H4"/>
                 </VBox>
             </HeaderContainer>
@@ -136,10 +136,10 @@
                 class="sapUiMediumMargin sapUiResponsivePadding"
                 items="{ranking>/}">
                     <columns>
-                        <Column minScreenWidth="Tablet" demandPopin="true">
+                        <Column minScreenWidth="Tablet" demandPopin="true" width="8%">
                             <Text text="Ação"/>
                         </Column>
-                        <Column minScreenWidth="Tablet" demandPopin="true"  vAlign="Middle">
+                        <Column minScreenWidth="Tablet" demandPopin="true"  vAlign="Middle" width="8%">
                             <Text text="Foto"/>
                         </Column>
                         <Column minScreenWidth="Tablet" demandPopin="true">
@@ -166,7 +166,7 @@
                         <ColumnListItem vAlign="Middle" >
                             <cells>
                                 <CheckBox selected="{ranking>selected}" />
-                                <main:Avatar icon="person-placeholder" shape="Circle"/>
+                                <Avatar src="../assets/women_avatar.png" />
                                 <Text text="{ranking>name}" class="textBold" />
                                 <Text text="{ranking>job}" />
                                 <Text text="{ranking>company}" />

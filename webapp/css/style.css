@@ -4,5 +4,9 @@
     font-weight: bold;
 }
 
-
+.myTable {
+    background-color: aqua;
+    color: aqua;
+    row-gap: 100rem;
+}
 

@@ -1,4 +1,4 @@
-{ "ranking": [
+[
     {
         "name": "João",
         "job": "Analista de Sistemas",
@@ -8,7 +8,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "joao@lab2dev.com",
         "portifolio": "www.figma.com/joao",
-        "site": "www.joao.com.br"
+        "site": "www.joao.com.br",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Maria",
@@ -19,7 +27,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "maria@sap.com",
         "portifolio": "www.figma/maria.com",
-        "site": "www.maria.com"
+        "site": "www.maria.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Carlos",
@@ -30,7 +46,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "carlos@lab2dev.com",
         "portifolio": "www.figma/carlos.com",
-        "site": "www.carlos.com"
+        "site": "www.carlos.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Juliana",
@@ -41,7 +65,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "juliana@sap.com",
         "portifolio": "www.figma/juliana.com",
-        "site": "www.juliana.com"
+        "site": "www.juliana.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Ana",
@@ -52,7 +84,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "ana@sap.com",
         "portifolio": "www.figma/ana.com",
-        "site": "www.ana.com"
+        "site": "www.ana.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Lucas",
@@ -63,7 +103,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "lucas@lab2dev.com",
         "portifolio": "www.figma/lucas.com",
-        "site": "www.lucas.com"
+        "site": "www.lucas.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Fernanda",
@@ -74,7 +122,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "fernanda@lab2dev.com",
         "portifolio": "www.figma/fernanda.com",
-        "site": "www.fernanda.com"
+        "site": "www.fernanda.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Rodrigo",
@@ -85,7 +141,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "rodrigo@lab2dev.com",
         "portifolio": "www.figma/rodrigo.com",
-        "site": "www.rodrigo.com"
+        "site": "www.rodrigo.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Thiago",
@@ -96,7 +160,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "thiago@sap.com",
         "portifolio": "www.figma/thiago.com",
-        "site": "www.thiago.com"
+        "site": "www.thiago.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Matheus",
@@ -107,7 +179,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "matheus@lab2dev.com",
         "portifolio": "www.figma/matheus.com",
-        "site": "www.matheus.com"
+        "site": "www.matheus.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "João Silva",
@@ -118,7 +198,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "joaosilva@sap.com",
         "portifolio": "www.figma/joaosilva.com",
-        "site": "www.joaosilva.com"
+        "site": "www.joaosilva.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Maria Oliveira",
@@ -129,7 +217,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "mariaoliveira@sap.com",
         "portifolio": "www.figma/mariaoliveira.com",
-        "site": "www.mariaoliveira.com"
+        "site": "www.mariaoliveira.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Fernanda Oliveira",
@@ -140,7 +236,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "fernandaoliveira@sap.com",
         "portifolio": "www.figma/fernandaoliveira.com",
-        "site": "www.fernandaoliveira.com"
+        "site": "www.fernandaoliveira.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Juliana Santos",
@@ -151,7 +255,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "julianasantos@lab2dev.com",
         "portifolio": "www.figma/julianasantos.com",
-        "site": "www.julianasantos.com"
+        "site": "www.julianasantos.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Ana Souza",
@@ -162,7 +274,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "anasouza@lab2dev.com",
         "portifolio": "www.figma/anasouza.com",
-        "site": "www.anasouza.com"
+        "site": "www.anasouza.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Lucas Costa",
@@ -173,7 +293,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "lucascosta@lab2dev.com",
         "portifolio": "www.figma/lucascosta.com",
-        "site": "www.lucascosta.com"
+        "site": "www.lucascosta.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Fernanda Lima",
@@ -184,7 +312,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "fernandalima@lab2dev.com",
         "portifolio": "www.figma/fernandalima.com",
-        "site": "www.fernandalima.com"
+        "site": "www.fernandalima.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Rodrigo Almeida",
@@ -195,7 +331,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "rodrigoalmeida@lab2dev.com",
         "portifolio": "www.figma/rodrigoalmeida.com",
-        "site": "www.rodrigoalmeida.com"
+        "site": "www.rodrigoalmeida.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Thiago Pereira",
@@ -206,7 +350,15 @@
         "telefone": "+55 11 94002 8922",
         "email": "thiagopereira@lab2dev.com",
         "portifolio": "www.figma/thiagopereira.com",
-        "site": "www.thiagopereira.com"
+        "site": "www.thiagopereira.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     },
     {
         "name": "Matheus Oliveira",
@@ -217,7 +369,14 @@
         "telefone": "+55 11 94002 8922",
         "email": "matheusoliveira@lab2dev.com",
         "portifolio": "www.figma/matheusoliveira.com",
-        "site": "www.matheusoliveira.com"
+        "site": "www.matheusoliveira.com",
+        "tarefas": [{
+            "ID": 1,
+            "name": "Lab2Dev",
+            "tipo": "Visitação de estande",
+            "data": "2023-01-15T08:30:00",
+            "points": 100
+
+        }]
     }
 ]
-}

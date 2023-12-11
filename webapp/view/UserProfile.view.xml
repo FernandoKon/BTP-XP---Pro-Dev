@@ -3,6 +3,7 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns:main="sap.ui.webc.main"
     xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form"
     xmlns:l="sap.ui.layout"
     xmlns:f="sap.f"
     height="100%">
@@ -67,24 +68,124 @@
                 </IconTabFilter>
             </items>
 		</IconTabBar>
-        <l:VerticalLayout class="sapUiMediumMarginBegin">
-            <HeaderContainer>
-                <VBox>
-                    <Title text="Relatórios" class="sapUiTinyMarginTopBottom textBold" titleStyle="H3"/>
-                    <Title text="Ranking > Perfil do usuário" class="sapUiTinyMarginBottom " titleStyle="H4"/>
-                </VBox>
-            </HeaderContainer>
-            
-        </l:VerticalLayout>
+        <HeaderContainer class="sapUiMediumMarginBegin">
+            <VBox>
+                <Title text="Relatórios " class="sapUiTinyMarginTopBottom textBold" titleStyle="H3"/>
+                <Title text="Ranking > Perfil do usuário" class="sapUiTinyMarginBottom " titleStyle="H4"/>
+            </VBox>
+        </HeaderContainer>
+        
+        
+        <Panel width="auto" backgroundDesign="Transparent" class="sapUiResponsiveContentPadding sapUiTinyMargin">
+            <main:Card>
+				<HBox justifyContent="SpaceBetween">
+                    <HBox alignItems="Center">
+                        <Avatar src="../assets/women_avatar.png" displaySize="XL" class="sapUiTinyMargin"/>
+                        <form:SimpleForm>
+                            <form:content>
+                                <core:Title text="Débora Freitas Lobão"/>
+                                <Text text="UI/UX Designer"/>
+                                <Text text="Lab2Dev"/>
+                            </form:content>
+                        </form:SimpleForm>
+                    </HBox>
+                    <form:SimpleForm>
+                        <form:content>
+                            <core:Title text="Badges obtidos"/>
+                            <Text text="UI/UX Designer"/>
+                            <Text text="Lab2Dev"/>
+                        </form:content>
+                    </form:SimpleForm>
+                    <form:SimpleForm>
+                        <form:content>
+                            <core:Title text="Posição e pontuação"/>
+                            <Text text="1º Lugar"/>
+                            <Text text="1500 pontos"/>
+                        </form:content>
+                    </form:SimpleForm>
+                    <Button type="Emphasized" text="Editar Dados" class="sapUiSmallMargin" />
+                </HBox>	
+                <HBox>
+                    <form:SimpleForm>
+                        <form:content>
+                            <core:Title text="Biografia"/>
+                            <Text text="Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae. Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae"/>
+                        </form:content>
+                    </form:SimpleForm>
+                    <form:SimpleForm >
+                        <form:content>
+                            <core:Title text="Contatos"/>
+                            <Label text="Telefone"/>
+                            <Link text="+55 11 994002 8922"/>
+                            <Label text="Email"/>
+                            <Link text="debora.lobao@lab2dev.com"/>
+                        </form:content>
+                    </form:SimpleForm>
+                    <form:SimpleForm>
+                        <form:content>
+                            <core:Title text="Profissional"/>
+                            <Label text="Portifólio"/>
+                            <Link text="www.figma.com/deboralobao"/>
+                            <Label text="Site"/>
+                            <Link text="www.deboralobao.com"/>
+                        </form:content>
+                    </form:SimpleForm>
+                </HBox>		
+            </main:Card>
+        </Panel>
+      
         
         <content >            
-            
+            <Table
+                    id="idProductsTable"
+                    sticky="HeaderToolbar,ColumnHeaders"
+                    inset="false"
+                    items=""
+                    class="sapFDynamicPageAlignContent"
+                    width="auto">
+                    <headerToolbar>
+                        <Toolbar>
+                            <Title text="Tarefas realizadas (1)"/>
+                            <ToolbarSpacer/>
+                            <SearchField width="15%"/>
+                        </Toolbar>
+                    </headerToolbar>
+                    <columns>
+                        <Column width="12em">
+                            <Text text="ID" />
+                        </Column>
+                        <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Begin">
+                            <Text text="Nome da tarefa" />
+                        </Column>
+                        <Column minScreenWidth="Tablet" demandPopin="true" hAlign="Center">
+                            <Text text="Tipo de tarefa" />
+                        </Column>
+                        <Column hAlign="Center">
+                            <Text text="Data/Hora da tarefa" />
+                        </Column>
+                        <Column hAlign="Center">
+                            <Text text="Pontuação obtida" />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem>
+                            <cells>
+                                <ObjectNumber
+                                    number="123456" />
+                                <Text text="Hands-on Sap Build Apps" />
+                                <Text text="Pesquisa de satisfação" />
+                                <Text text="09/05/2024 - 15h30" />
+                                <Text text="200 pontos" />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
         </content>
         <footer >
             <OverflowToolbar class= "sapUiResponsivePadding sapUiContentPadding sapUiMediumMarginBeginEnd ">
                 <ToolbarSpacer/>
                 <Button text="Exportar Excel" type="Emphasized" press="onExportToExcel" icon="sap-icon://excel-attachment" iconFirst="false" />
-                <Button text="Pontuar Jogadores" type="Emphasized" press="onOpenDialog"/>
+                <Button text="Pontuar Jogador" type="Emphasized" press="onOpenDialog"/>
             </OverflowToolbar>
         </footer>
     </Page>
