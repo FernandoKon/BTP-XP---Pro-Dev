@@ -18,22 +18,32 @@ sap.ui.define(
         formatter: formatter,
   
         onInit: function () {
-            const oRouter = this.getOwnerComponent().getRouter();
+            this.oRouter = this.getOwnerComponent().getRouter();
 
-            const userProfile = oRouter.getRoute("UserProfile");
+            this.oRouter
+            .getRoute("UserProfile")
+            .attachPatternMatched(this.onRouteMatch, this);
+
+            
         },
   
-        onObjectMatched: function (oEvent) {
-          const oArgs = oEvent.getParameter("arguments");
-
-          const userName = oArgs.Name;
-
-          const oUserModel = new JSONModel({
-            Name: userName
-          });
-
-          this.getView().setModel(oUserModel, "userProfile")
+        onRouteMatch: function (oEvent) {
+          const oArguments = oEvent.getParameter("arguments")
+          
+          this.getUserInfo(oArguments.Name).then((e) => {
+            const oModel = new JSONModel(e);
+            this.getView().setModel(oModel, "userProfile");
+          })
         },
+
+        getUserInfo: async function (name) {
+          const oModel = new JSONModel();
+          await oModel.loadData("/model/ranking.json");
+          const oData = oModel.getData()
+          console.log(oData)
+        
+        return oData.find((el) => el.name === String(name))
+      },
         
         onOpenDialog: function () {  
           if (!this.dialog) {

@@ -72,7 +72,7 @@
 
         <HeaderContainer class="sapUiMediumMarginBegin">
             <VBox>
-                <Title text="Relatórios" class="sapUiTinyMarginTopBottom textBold" titleStyle="H3"/>
+                <Title text="Relatórios " class="sapUiTinyMarginTopBottom textBold" titleStyle="H3"/>
                 <Title text="Ranking > Perfil do usuário" class="sapUiTinyMarginBottom " titleStyle="H4"/>
             </VBox>
         </HeaderContainer>
@@ -85,9 +85,9 @@
                         <Avatar src="../assets/women_avatar.png" displaySize="XL" class="sapUiTinyMargin"/>
                         <form:SimpleForm>
                             <form:content>
-                                <core:Title text="Débora Freitas Lobão"/>
-                                <Text text="UI/UX Designer"/>
-                                <Text text="Lab2Dev"/>
+                                <core:Title text="{userProfile>/name}"/>
+                                <Text text="{userProfile>/job}"/>
+                                <Text text="{userProfile>/company}"/>
                             </form:content>
                         </form:SimpleForm>
                     </HBox>
@@ -104,8 +104,8 @@
                     <form:SimpleForm>
                         <form:content>
                             <core:Title text="Posição e pontuação"/>
-                            <Text text="1º Lugar"/>
-                            <Text text="1500 pontos"/>
+                            <Text text="{userProfile>/position}º Lugar"/>
+                            <Text text="{userProfile>/score} pontos"/>
                         </form:content>
                     </form:SimpleForm>
                     <Button type="Emphasized" text="Editar Dados" class="sapUiSmallMargin" />
@@ -114,25 +114,25 @@
                     <form:SimpleForm>
                         <form:content>
                             <core:Title text="Biografia"/>
-                            <Text text="Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae. Lorem ipsum dolor sit amet. Et adipisci laboriosam non quia dolor vel tempora rerum ut nulla minus non magni iusto aut quisquam quia est voluptatibus molestiae"/>
+                            <Text text="{userProfile>/biografia}"/>
                         </form:content>
                     </form:SimpleForm>
                     <form:SimpleForm >
                         <form:content>
                             <core:Title text="Contatos"/>
                             <Label text="Telefone"/>
-                            <Link text="+55 11 994002 8922"/>
+                            <Link text="{userProfile>/telefone}"/>
                             <Label text="Email"/>
-                            <Link text="debora.lobao@lab2dev.com"/>
+                            <Link text="{userProfile>/email}"/>
                         </form:content>
                     </form:SimpleForm>
                     <form:SimpleForm>
                         <form:content>
                             <core:Title text="Profissional"/>
                             <Label text="Portifólio"/>
-                            <Link text="www.figma.com/deboralobao"/>
+                            <Link text="{userProfile>/email}"/>
                             <Label text="Site"/>
-                            <Link text="www.deboralobao.com"/>
+                            <Link text="{userProfile>/site}"/>
                         </form:content>
                     </form:SimpleForm>
                 </HBox>		
@@ -145,7 +145,7 @@
                     id="idProductsTable"
                     sticky="HeaderToolbar,ColumnHeaders"
                     inset="false"
-                    items=""
+                    items="{userProfile>/tarefas}"
                     class="sapUiMediumMargin sapUiResponsivePadding"
                     width="auto">
                     <headerToolbar>
@@ -177,7 +177,7 @@
                             <cells>
                                 <ObjectNumber
                                     number="123456" />
-                                <Text text="Hands-on Sap Build Apps" />
+                                <Text text="{userProfile>/name}" />
                                 <Text text="Pesquisa de satisfação" />
                                 <Text text="09/05/2024 - 15h30" />
                                 <Text text="200 pontos" />
@@ -194,5 +194,4 @@
             </OverflowToolbar>
         </footer>
     </Page>
-
 </mvc:View>

@@ -38,6 +38,54 @@ sap.ui.define(
       formatter: formatter,
 
       onInit: function () {
+        function getData() {
+          const request = new XMLHttpRequest();
+          request.open("GET", "/model/ranking.json", false);
+          request.send();
+
+          if (request.status === 200) {
+            return JSON.parse(request.responseText);
+          } else {
+            console.error("Falha ao carregar dados: " + request.status);
+            return [];
+          }
+        }
+
+        const Ranking = getData();
+
+        Ranking.sort((a, b) => b.score - a.score);
+
+        Ranking.forEach((item, index) => (item.position = index + 1));
+
+        this.getView().setModel(new JSONModel(Ranking), "ranking");
+
+        const addPoints = {
+          points: 0,
+        };
+
+        const points = [
+          {
+            key: "descending",
+            name: "Maior para Menor",
+          },
+          {
+            key: "ascending",
+            name: "Menor para Maior",
+          },
+        ];
+
+        this.getView().setModel(new JSONModel(addPoints), "addPoints");
+
+        const companies = Ranking.map((item) => item.company);
+
+        const uniqueCompanies = [...new Set(companies)];
+
+        const oCompaniesModel = new JSONModel(uniqueCompanies);
+        this.getView().setModel(oCompaniesModel, "empresas");
+
+        const oPointsModel = new JSONModel(points);
+        this.getView().setModel(oPointsModel, "pontuacoes");
+
         const oMultiComboBox = this.byId("idMultiComboBoxEmpresas");
 
         oMultiComboBox.bindItems({
@@ -149,10 +197,7 @@ sap.ui.define(
       },
 
       onConfirm: function () {
-        const input = this.byId("idInputPontuacao");
-        const points = input.getValue();
-
-        // const points = this.getView().getModel("addPoints");
+        const points = this.getView().getModel("addPoints");
         const addPoints = parseInt(points.getData().points);
 
         if (isNaN(addPoints) || addPoints < 0) {
