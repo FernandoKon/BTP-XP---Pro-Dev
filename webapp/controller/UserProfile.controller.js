@@ -3,15 +3,6 @@ sap.ui.define(
       "sap/ui/core/mvc/Controller",
       "sap/ui/model/json/JSONModel",
       "com/lab2dev/btpxp/model/formatter",
-      "sap/ui/model/Filter",
-      "sap/ui/model/FilterOperator",
-      "sap/ui/core/Fragment",
-      "sap/m/BusyDialog",
-      "sap/m/MessageToast",
-      "sap/ui/core/Item",
-      "sap/ui/model/Sorter",
-      "sap/ui/export/Spreadsheet",
-      "sap/ui/export/library",
     ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
@@ -20,15 +11,6 @@ sap.ui.define(
       Controller,
       JSONModel,
       formatter,
-      Filter,
-      FilterOperator,
-      Fragment,
-      BusyDialog,
-      MessageToast,
-      Item,
-      Sorter,
-      Spreadsheet,
-      exportLibrary
     ) {
       "use strict";
   
@@ -36,17 +18,35 @@ sap.ui.define(
         formatter: formatter,
   
         onInit: function () {
-            const oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-            oRouter.getRoute("UserProfile").attachMatched(this._onRouteMatched, this);
+            const oRouter = this.getOwnerComponent().getRouter();
+
+            const userProfile = oRouter.getRoute("UserProfile");
         },
   
-        _onRouteMatched: function (oEvent) {
-            const sName = oEvent.getParameter("arguments").Name;
-            this.loadOrderDetails(sName);
+        onObjectMatched: function (oEvent) {
+          const oArgs = oEvent.getParameter("arguments");
+
+          const userName = oArgs.Name;
+
+          const oUserModel = new JSONModel({
+            Name: userName
+          });
+
+          this.getView().setModel(oUserModel, "userProfile")
+        },
+        
+        onOpenDialog: function () {  
+          if (!this.dialog) {
+            this.dialog = sap.ui.xmlfragment(
+              "com.lab2dev.btpxp.view.fragments.Dialog",
+              this
+            );
+            this.getView().addDependent(this.dialog);
+          }
+  
+          this.dialog.open();
         },
 
-        
-        
       });
     }
   );

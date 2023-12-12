@@ -12,6 +12,7 @@
         showHeader="false"
 		class= "sapUiResponsivePadding sapUiContentPadding ">  
         <IconTabBar
+            selectedKey="Relatórios"
 			id="iconTabHeader"
             class="sapUiResponsiveContentPadding sapUiNoContentPadding">
 			<layoutData>
@@ -70,7 +71,7 @@
         <l:VerticalLayout class="sapUiMediumMarginBegin">
             <HeaderContainer>
                 <VBox>
-                    <Title text="Relatórios {ranking>/name}" class="sapUiTinyMarginTopBottom textBold" titleStyle="H3"/>
+                    <Title text="Relatórios" class="sapUiTinyMarginTopBottom textBold" titleStyle="H3"/>
                     <Title text="Ranking" class="sapUiTinyMarginBottom " titleStyle="H4"/>
                 </VBox>
             </HeaderContainer>
@@ -97,15 +98,14 @@
                 </VBox>
                 <VBox>
                     <Label text="Ordenar Pontuação"/>
-                    <Select
+                    <ComboBox
                         id="idComboBoxOrdernarPontuacao"
-                        
                         name="OrdernarPontuacao"
                         items="{pontuacoes>/}"
-                        selectedKey="maiorMenor"
+                        placeholder="Maior para Menor"
                         >
                         <core:Item key="{pontuacoes>key}" text="{pontuacoes>name}" />
-                    </Select>
+                    </ComboBox>
                     <layoutData>
                         <FlexItemData styleClass="sapUiTinyMarginBeginEnd"/>
                     </layoutData>
@@ -131,9 +131,10 @@
             <FlexBox justifyContent="Center">
                 <Table
                 id="idTable"
+                noDataText="Nenhum usuário encontrado"
                 backgroundDesign="Solid"
                 width="auto"
-                class="sapUiMediumMargin sapUiResponsivePadding"
+                class="sapUiResponsiveMargin sapUiResponsivePadding"
                 items="{ranking>/}">
                     <columns>
                         <Column minScreenWidth="Tablet" demandPopin="true" width="8%">
@@ -163,7 +164,7 @@
                     </columns>
 
                     <items >
-                        <ColumnListItem vAlign="Middle" >
+                        <ColumnListItem vAlign="Middle">
                             <cells>
                                 <CheckBox selected="{ranking>selected}" />
                                 <Avatar src="../assets/women_avatar.png" />

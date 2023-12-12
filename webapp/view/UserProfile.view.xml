@@ -14,6 +14,7 @@
 		class= "sapUiResponsivePadding sapUiContentPadding ">  
         <IconTabBar
 			id="iconTabHeader"
+            selectedKey="Relatórios"
             class="sapUiResponsiveContentPadding sapUiNoContentPadding">
 			<layoutData>
 				<OverflowToolbarLayoutData priority="NeverOverflow" shrinkable="true" />
@@ -68,9 +69,10 @@
                 </IconTabFilter>
             </items>
 		</IconTabBar>
+
         <HeaderContainer class="sapUiMediumMarginBegin">
             <VBox>
-                <Title text="Relatórios " class="sapUiTinyMarginTopBottom textBold" titleStyle="H3"/>
+                <Title text="Relatórios" class="sapUiTinyMarginTopBottom textBold" titleStyle="H3"/>
                 <Title text="Ranking > Perfil do usuário" class="sapUiTinyMarginBottom " titleStyle="H4"/>
             </VBox>
         </HeaderContainer>
@@ -92,8 +94,11 @@
                     <form:SimpleForm>
                         <form:content>
                             <core:Title text="Badges obtidos"/>
-                            <Text text="UI/UX Designer"/>
-                            <Text text="Lab2Dev"/>
+                            <HBox justifyContent="SpaceAround">
+                                <Avatar src="../assets/badge.png"/>
+                                <Avatar src="../assets/badge.png"/>
+                                <Avatar src="../assets/badge.png"/>
+                            </HBox>
                         </form:content>
                     </form:SimpleForm>
                     <form:SimpleForm>
@@ -141,7 +146,7 @@
                     sticky="HeaderToolbar,ColumnHeaders"
                     inset="false"
                     items=""
-                    class="sapFDynamicPageAlignContent"
+                    class="sapUiMediumMargin sapUiResponsivePadding"
                     width="auto">
                     <headerToolbar>
                         <Toolbar>
