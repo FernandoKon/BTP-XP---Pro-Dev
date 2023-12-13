@@ -51,6 +51,10 @@ sap.ui.define(
           }
         }
 
+        const oModel = new JSONModel();
+
+        oModel.loadData("/model/ranking.json");
+
         const Ranking = getData();
 
         Ranking.sort((a, b) => b.score - a.score);
@@ -248,24 +252,28 @@ sap.ui.define(
           label: "Nome",
           property: "name",
           type: EdmType.String,
+          textAlign: "Center"
         });
 
         aCols.push({
           label: "Cargo",
           property: "job",
           type: EdmType.String,
+          textAlign: "Center"
         });
 
         aCols.push({
           label: "Empresa",
           property: "company",
           type: EdmType.String,
+          textAlign: "Center"
         });
 
         aCols.push({
           label: "Posição",
           property: "position",
           type: EdmType.String,
+          textAlign: "Center"
         });
 
         aCols.push({
@@ -273,6 +281,7 @@ sap.ui.define(
           type: EdmType.Number,
           property: "score",
           scale: 0,
+          textAlign: "Center"
         });
 
         return aCols;

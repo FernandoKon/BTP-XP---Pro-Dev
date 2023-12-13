@@ -149,7 +149,7 @@
                     width="auto">
                     <headerToolbar>
                         <Toolbar>
-                            <Title text="{= 'Tarefas Realizadas (' + ${userProfile>/tarefas/length} + ')' }" level="H2"/>
+                            <Title text="{= 'Tarefas Realizadas (' + ${userProfile>/numberOfTasks} + ')' }" level="H2"/>
                             <ToolbarSpacer/>
                             <SearchField width="20%" liveChange="onSearch"/>
                         </Toolbar>
@@ -193,7 +193,7 @@
         <footer >
             <OverflowToolbar class= "sapUiResponsivePadding sapUiContentPadding sapUiMediumMarginBeginEnd ">
                 <ToolbarSpacer/>
-                <Button text="Exportar Excel" type="Emphasized" press="onExportToExcel" icon="sap-icon://excel-attachment" iconFirst="false" />
+                <Button text="Exportar Excel" type="Emphasized" press="onExportToExcelTasks" icon="sap-icon://excel-attachment" iconFirst="false" />
                 <Button text="Pontuar Jogador" type="Emphasized" press="onOpenDialog"/>
             </OverflowToolbar>
         </footer>

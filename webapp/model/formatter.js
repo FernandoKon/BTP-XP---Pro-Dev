@@ -14,7 +14,6 @@ sap.ui.define([
              pattern: "dd/MM/yyyy' - 'HH'h'mm"
          });
 
-         // Certifique-se de que oDate é um objeto Date
          if (!(oDate instanceof Date)) {
             oDate = new Date(oDate);
          }
