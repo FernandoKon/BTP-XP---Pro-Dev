@@ -82,10 +82,10 @@
             <main:Card>
 				<HBox justifyContent="SpaceBetween">
                     <HBox alignItems="Center">
-                        <Avatar src="../assets/women_avatar.png" displaySize="XL" class="sapUiTinyMargin"/>
+                        <Avatar src="../assets/women_avatar.png" displaySize="L" class="sapUiTinyMargin"/>
                         <form:SimpleForm>
                             <form:content>
-                                <core:Title text="{userProfile>/name}"/>
+                                <core:Title text="{userProfile>/name}" level="H3"/>
                                 <Text text="{userProfile>/job}"/>
                                 <Text text="{userProfile>/company}"/>
                             </form:content>
@@ -142,17 +142,16 @@
         
         <content >            
             <Table
-                    id="idProductsTable"
-                    sticky="HeaderToolbar,ColumnHeaders"
+                    id="idTaskTable"
                     inset="false"
-                    items="{userProfile>/tarefas}"
+                    items="{userProfile>/tarefas/}"
                     class="sapUiMediumMargin sapUiResponsivePadding"
                     width="auto">
                     <headerToolbar>
                         <Toolbar>
-                            <Title text="Tarefas realizadas (1)"/>
+                            <Title text="{= 'Tarefas Realizadas (' + ${userProfile>/tarefas/length} + ')' }" level="H2"/>
                             <ToolbarSpacer/>
-                            <SearchField width="15%"/>
+                            <SearchField width="20%" liveChange="onSearch"/>
                         </Toolbar>
                     </headerToolbar>
                     <columns>
@@ -176,11 +175,16 @@
                         <ColumnListItem>
                             <cells>
                                 <ObjectNumber
-                                    number="123456" />
-                                <Text text="{userProfile>/name}" />
-                                <Text text="Pesquisa de satisfação" />
-                                <Text text="09/05/2024 - 15h30" />
-                                <Text text="200 pontos" />
+                                    number="{userProfile>ID}" />
+                                <Text text="{userProfile>name}" />
+                                <Text text="{userProfile>tipo}" />
+                                <ObjectAttribute 
+                                text='{
+                                    path: "userProfile>data",
+                                    formatter: ".formatter.formatDate"
+                                    
+                                }'/>
+                                <Text text="{userProfile>points} pontos" />
                             </cells>
                         </ColumnListItem>
                     </items>

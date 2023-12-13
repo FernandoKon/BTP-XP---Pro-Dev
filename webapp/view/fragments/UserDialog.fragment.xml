@@ -1,0 +1,47 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+	<Dialog
+		id="secondDialog"
+		title="Inserir pontuação para o Usuário"
+        contentWidth="474px"
+        >
+		<content>
+            <FlexBox direction="Column" alignItems="Center" 
+            class="sapUiSmallMargin sapUiResponsivePadding sapUiContentPadding">
+                <Text 
+                text="Preencha o formulário para pontuar os usuários selecionados previamente:" 
+                wrapping="true" textAlign="Center" class="sapUiLargeMarginBeginEnd"/>
+                <VBox justifyContent="Start" width="220px">
+                    <Label text="Nome da tarefa" required="true" class="sapUiMediumMarginTop" textAlign="Left"/>
+                    <Input id="nomeTarefa" placeholder="Ex: Quiz diário"/>
+                    <Label text="Tipo da tarefa" required="true"/>
+                    <Input id="tipoTarefa" placeholder="Ex: Tarefa"/>
+                    <Label text="Pontuação" required="true"/>
+                    <Input id="idInputPontuacao" value="{addPoints>/points}" class="sapUiMediumMarginBottom" placeholder="Ex: 200" type="Number"/>
+                </VBox>
+                <VBox justifyContent="Start">
+                    <HBox alignItems="Center"
+                    justifyContent="Start">
+                        <core:Icon src="sap-icon://alert" class="sapUiTinyMarginEnd" color="#ff8c00"/>
+                        <Text text= "Lembre-se que após confirmar a inserção da pontuação, essa pontuação não poderá ser desfeita."/>
+                    </HBox>
+                    <HBox alignItems="Center"
+                    justifyContent="Start">
+                        <core:Icon src="sap-icon://alert" class="sapUiTinyMarginEnd" color="#ff8c00"/>
+                        <Text text= "Todos os usuários selecionados receberão a mesma pontuação"/>
+                    </HBox>
+                </VBox>
+
+            </FlexBox>
+		</content>
+		<footer>
+			<OverflowToolbar class= "sapUiResponsivePadding sapUiContentPadding">
+                <ToolbarSpacer/>
+                <Button text="Confirmar pontuação" type="Emphasized" press="onCloseDialog" />
+            </OverflowToolbar>
+		</footer>
+	</Dialog>
+</core:FragmentDefinition>

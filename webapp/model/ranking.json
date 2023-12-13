@@ -9,14 +9,29 @@
         "email": "joao@lab2dev.com",
         "portifolio": "www.figma.com/joao",
         "site": "www.joao.com.br",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Maria",
@@ -28,14 +43,29 @@
         "email": "maria@sap.com",
         "portifolio": "www.figma/maria.com",
         "site": "www.maria.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Carlos",
@@ -47,14 +77,29 @@
         "email": "carlos@lab2dev.com",
         "portifolio": "www.figma/carlos.com",
         "site": "www.carlos.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Juliana",
@@ -66,14 +111,29 @@
         "email": "juliana@sap.com",
         "portifolio": "www.figma/juliana.com",
         "site": "www.juliana.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Ana",
@@ -85,14 +145,29 @@
         "email": "ana@sap.com",
         "portifolio": "www.figma/ana.com",
         "site": "www.ana.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Lucas",
@@ -104,14 +179,29 @@
         "email": "lucas@lab2dev.com",
         "portifolio": "www.figma/lucas.com",
         "site": "www.lucas.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Fernanda",
@@ -123,14 +213,29 @@
         "email": "fernanda@lab2dev.com",
         "portifolio": "www.figma/fernanda.com",
         "site": "www.fernanda.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Rodrigo",
@@ -142,14 +247,29 @@
         "email": "rodrigo@lab2dev.com",
         "portifolio": "www.figma/rodrigo.com",
         "site": "www.rodrigo.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Thiago",
@@ -161,14 +281,29 @@
         "email": "thiago@sap.com",
         "portifolio": "www.figma/thiago.com",
         "site": "www.thiago.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Matheus",
@@ -180,14 +315,29 @@
         "email": "matheus@lab2dev.com",
         "portifolio": "www.figma/matheus.com",
         "site": "www.matheus.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "João Silva",
@@ -199,14 +349,29 @@
         "email": "joaosilva@sap.com",
         "portifolio": "www.figma/joaosilva.com",
         "site": "www.joaosilva.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Maria Oliveira",
@@ -218,14 +383,29 @@
         "email": "mariaoliveira@sap.com",
         "portifolio": "www.figma/mariaoliveira.com",
         "site": "www.mariaoliveira.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Fernanda Oliveira",
@@ -237,14 +417,29 @@
         "email": "fernandaoliveira@sap.com",
         "portifolio": "www.figma/fernandaoliveira.com",
         "site": "www.fernandaoliveira.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Juliana Santos",
@@ -256,14 +451,29 @@
         "email": "julianasantos@lab2dev.com",
         "portifolio": "www.figma/julianasantos.com",
         "site": "www.julianasantos.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Ana Souza",
@@ -275,14 +485,29 @@
         "email": "anasouza@lab2dev.com",
         "portifolio": "www.figma/anasouza.com",
         "site": "www.anasouza.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Lucas Costa",
@@ -294,14 +519,29 @@
         "email": "lucascosta@lab2dev.com",
         "portifolio": "www.figma/lucascosta.com",
         "site": "www.lucascosta.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Fernanda Lima",
@@ -313,14 +553,29 @@
         "email": "fernandalima@lab2dev.com",
         "portifolio": "www.figma/fernandalima.com",
         "site": "www.fernandalima.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Rodrigo Almeida",
@@ -332,14 +587,29 @@
         "email": "rodrigoalmeida@lab2dev.com",
         "portifolio": "www.figma/rodrigoalmeida.com",
         "site": "www.rodrigoalmeida.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Thiago Pereira",
@@ -351,14 +621,29 @@
         "email": "thiagopereira@lab2dev.com",
         "portifolio": "www.figma/thiagopereira.com",
         "site": "www.thiagopereira.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     },
     {
         "name": "Matheus Oliveira",
@@ -370,13 +655,28 @@
         "email": "matheusoliveira@lab2dev.com",
         "portifolio": "www.figma/matheusoliveira.com",
         "site": "www.matheusoliveira.com",
-        "tarefas": [{
-            "ID": 1,
-            "name": "Lab2Dev",
-            "tipo": "Visitação de estande",
-            "data": "2023-01-15T08:30:00",
-            "points": 100
-
-        }]
+        "tarefas": [
+            {
+                "ID": 1,
+                "name": "Lab2Dev",
+                "tipo": "Visitação de estande",
+                "data": "2024-05-15T08:30:00",
+                "points": 100
+            },
+            {
+                "ID": 2,
+                "name": "Quiz Diário",
+                "tipo": "Quiz diário - BTP XP",
+                "data": "2024-05-07T10:45:00",
+                "points": 200
+            },
+            {
+                "ID": 3,
+                "name": "Hackaton ABAP",
+                "tipo": "Hackaton",
+                "data": "2024-05-10T09:15:00",
+                "points": 500
+            }
+        ]
     }
 ]
