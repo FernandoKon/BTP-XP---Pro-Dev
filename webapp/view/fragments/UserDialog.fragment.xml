@@ -16,11 +16,11 @@
                 wrapping="true" textAlign="Center" class="sapUiLargeMarginBeginEnd"/>
                 <VBox justifyContent="Start" width="220px">
                     <Label text="Nome da tarefa" required="true" class="sapUiMediumMarginTop" textAlign="Left"/>
-                    <Input id="nomeTarefa" placeholder="Ex: Quiz diário"/>
+                    <Input  placeholder="Ex: Quiz diário"/>
                     <Label text="Tipo da tarefa" required="true"/>
-                    <Input id="tipoTarefa" placeholder="Ex: Tarefa"/>
+                    <Input  placeholder="Ex: Tarefa"/>
                     <Label text="Pontuação" required="true"/>
-                    <Input id="idInputPontuacao" value="{addPoints>/points}" class="sapUiMediumMarginBottom" placeholder="Ex: 200" type="Number"/>
+                    <Input class="sapUiMediumMarginBottom" placeholder="Ex: 200" type="Number"/>
                 </VBox>
                 <VBox justifyContent="Start">
                     <HBox alignItems="Center"

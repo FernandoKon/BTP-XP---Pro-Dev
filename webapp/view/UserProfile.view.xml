@@ -95,7 +95,7 @@
                         <form:content>
                             <core:Title text="Badges obtidos"/>
                             <HBox justifyContent="SpaceAround">
-                                <Avatar src="../assets/badge.png"/>
+                                <Avatar src="../assets/badges.png"/>
                                 <Avatar src="../assets/badge.png"/>
                                 <Avatar src="../assets/badge.png"/>
                             </HBox>
